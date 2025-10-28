@@ -9,6 +9,7 @@ from lean_spec.subspecs.containers import (
     BlockBody,
     Checkpoint,
     Config,
+    Signature,
     SignedAttestation,
 )
 from lean_spec.subspecs.containers.block import Attestations
@@ -59,7 +60,7 @@ def build_signed_attestation(
     )
     return SignedAttestation(
         message=message,
-        signature=Bytes4000.zero(),
+        signature=Signature.zero(),
     )
 
 
